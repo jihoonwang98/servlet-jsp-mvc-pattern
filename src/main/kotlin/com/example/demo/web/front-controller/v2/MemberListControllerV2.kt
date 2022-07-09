@@ -8,6 +8,6 @@ class MemberListControllerV2 : ControllerV2 {
     override fun process(request: HttpServletRequest, response: HttpServletResponse): MyView {
         val members = MemberRepository.findAll()
         request.setAttribute("members", members)
-        return MyView("members")
+        return MyView("/WEB-INF/view/members")
     }
 }

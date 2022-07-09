@@ -6,11 +6,12 @@ import javax.servlet.http.HttpServletResponse
 class MyView(
     val path: String,
 ) {
-    private val prefix = "/WEB-INF/view/"
-    private val postfix = ".jsp"
 
-    fun render(request: HttpServletRequest, response: HttpServletResponse) {
-        val dispatcher = request.getRequestDispatcher("${prefix}${path}${postfix}")
+    fun render(request: HttpServletRequest, response: HttpServletResponse, model: Map<String, Any>? = null) {
+        val dispatcher = request.getRequestDispatcher(path)
+
+        model?.forEach { (key, value) -> request.setAttribute(key, value) }
+
         dispatcher.forward(request, response)
     }
 }

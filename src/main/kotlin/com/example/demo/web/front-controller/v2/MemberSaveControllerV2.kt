@@ -13,7 +13,7 @@ class MemberSaveControllerV2 : ControllerV2 {
         val member = MemberRepository.save(Member(username, age))
         request.setAttribute("member", member)
 
-        return MyView("save")
+        return MyView("/WEB-INF/view/save")
 
     }
 
