@@ -1,4 +1,4 @@
-package com.example.demo.web
+package com.example.demo.web.servlet
 
 import javax.servlet.annotation.WebServlet
 import javax.servlet.http.HttpServlet

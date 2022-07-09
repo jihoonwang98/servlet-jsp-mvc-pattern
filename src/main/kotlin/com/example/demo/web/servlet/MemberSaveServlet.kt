@@ -1,4 +1,4 @@
-package com.example.demo.web
+package com.example.demo.web.servlet
 
 import com.example.demo.domain.Member
 import com.example.demo.repository.MemberRepository
